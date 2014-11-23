@@ -36,6 +36,6 @@ for line in fr:
         continue
     if eng==ame:
         if len(eng) != 0:
-            fw.write(word+'\t['+ame+']\n')
+            fw.write(word+'\t'+ame+'\n')
     else:
-        fw.write(word+'\t['+ame+', '+eng+']\n')
+        fw.write(word+'\t'+ame+', '+eng+'\n')

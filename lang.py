@@ -11,4 +11,4 @@ for line in fr:
         continue
     if ' [' in tmp[1] and '] ' in tmp[1]:
         eng=tmp[1].split(' [')[1].split('] ')[0]
-        fw.write(word+'\t['+eng+']\n')
+        fw.write(word+'\t'+eng+'\n')

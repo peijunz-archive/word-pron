@@ -49,7 +49,7 @@ def moby2pron(s):
         #print(i)
 if __name__=='__main__':
     f=open('mobypron.unc','r')
-    g=open('base','w')
+    g=open('moby.prb','w')
     for i in f:
         if len(i)>2:
             l=(i.strip('\n')).split()

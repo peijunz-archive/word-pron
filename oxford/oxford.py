@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 def rsp(s):
     return s.strip().lstrip()
-fr=open('oxford','r')
-fw=open('oxford_map','w')
+fr=open('oxford.txt','r')
+fw=open('oxford.prb','w')
 for line in fr:
     tmp=''.join(line.split(' • '))
     tmp=tmp.split("\t")

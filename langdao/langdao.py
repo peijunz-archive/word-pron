@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 def rsp(s):
     return s.strip().lstrip()
-fr=open('lang','r')
-fw=open('lang_map','w')
+fr=open('langdao.txt','r')
+fw=open('langdao.prb','w')
 for line in fr:
     tmp=line.split("\t")
     word=tmp[0]

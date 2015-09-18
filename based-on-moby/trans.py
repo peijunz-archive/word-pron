@@ -26,25 +26,18 @@ sg={
         'Z' :'ʒ',
         ',':'ˌ'
     }
-def moby2pron(s):
-    ll=s.split("'")
-    if(len(ll)==1):
-        ls=''
-        rs=ll[0]
-    elif len(ll)==2:
-        #print(ll)
-        ls=ll[0]
-        rs=ll[1]
-    else:
-        print(s)
-        return ''
-    #rs=rs.lstrip('/')
-    rsl=rs.split('/')
+def emps(s):
+    rsl=s.split('/')
     if(len(rsl)>1):
         if(rsl[1]=='@'):
             rsl[1]='ʌ'
-        rs='/'.join(rsl)
-        s=ls+"'"+rs
+        return '/'.join(rsl)
+    return s
+def moby2pron(s):
+    ll=s.split("'")
+    le=[emps(i) for i in ll]
+    le[0]=ll[0]
+    s="'".join(le)
     for key,value in db.items():
         s=s.replace(key,value)
     for key,value in sg.items():
